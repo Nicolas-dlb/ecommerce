@@ -1,0 +1,123 @@
+header {
+  display: flex;
+  width: 100%;
+  height: 11vh;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(238, 228, 228, 0.781);
+  align-items: center;
+  justify-content: flex-start;
+  .cart_number {
+    background: hsl(26, 100%, 55%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    font-size: 8.5px;
+    padding: 1.2px;
+    position: absolute;
+    right: 107px;
+    top: 18px;
+    pointer-events: none;
+    
+  }
+  .background {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    pointer-events: none;
+    background-color: rgba(85, 73, 73, 0.452)
+  }
+  .header_menu {
+display: none ;
+  }
+  img {
+   
+    cursor: pointer;
+  }
+  .logo {
+ width: 120px;
+ position: relative;
+ margin: 0px 10px;
+  }
+  #cart {
+    width: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 21px;
+    right: 110px;
+    transform: scale(0.9);
+    &:hover path {
+      fill: black;
+    }
+  }
+ 
+  .user {
+    width: 36px;
+  position: absolute;
+  top: 11px;
+right: 40px;
+
+    border-radius: 50%;
+    &:hover {
+      transform: translateY(-2px) translateX(2.6px);
+      border: 2.4px solid  hsl(26, 100%, 55%);
+    }
+  }
+
+  .nav_web ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+    top: 9px;
+    
+    font-size: 13px;
+    color: hsl(219, 9%, 45%);
+   &:hover {
+      transform: translateY(1px);
+   }
+    li {
+      
+      padding: 5px 10px;
+      padding-bottom: 19px;
+      cursor: pointer;
+      overflow: hidden;
+      &:hover {
+        color: hsl(220, 13%, 13%);
+        border-bottom: 2.8px solid  hsl(26, 100%, 55%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px){
+  header{
+    .user {
+      width: 35px;
+    }
+    .cart_number {
+      right: 90px;
+    }
+    #cart {
+      right: 92px;
+      transform: scale(0.8);
+    }
+    .header_menu {
+      display: flex;
+      margin-left: 15px;
+    }
+    .nav_web {
+      display: none;
+    }
+  }
+}
