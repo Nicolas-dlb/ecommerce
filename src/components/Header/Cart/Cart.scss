@@ -1,117 +1,115 @@
 .cart {
-  background: white;
-  border-radius:8px;
-  position: absolute;
-  width: 270px;
-  right: 5%;
-  top: 53px;
-  z-index: 1;
-  padding: 8px;
-  padding-bottom: 14px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  .cart_products {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h5 {
-      font-size: 12.5px;
-      color:hsl(219, 9%, 45%)
-    }
-  }
-  .cart_header {
-    border-bottom: 1px solid rgba(230, 222, 222, 0.685);
-    padding: 10px;
-    h5 {
-      font-size: 12.6px;
-      color: hsl(220, 13%, 13%);
-    }
-  }
-  button {
-    &:hover {
-      opacity: .7;
-    }
-padding: 10px;
-border-radius: 6px;
-border: none;
-cursor: pointer;
-width: 94%;
-position: relative;
-left: 8px;
-color: white;
-background: hsl(26, 100%, 55%);
-  }
-  .item {
-    margin: 8px 0px;
-    padding: 10px 10px;
-    display: flex;
-    cursor: pointer;
-    border-radius: 8px;
-    &:hover {
+	background: white;
+	border-radius: 8px;
+	position: absolute;
+	width: 270px;
+	right: 5%;
+	top: 53px;
+	z-index: 1;
+	padding: 8px;
+	padding-bottom: 14px;
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+		rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	.cart_products {
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		h5 {
+			font-size: 12.5px;
+			color: hsl(219, 9%, 45%);
+		}
+	}
+	.cart_header {
+		border-bottom: 1px solid rgba(230, 222, 222, 0.685);
+		padding: 10px;
+		h5 {
+			font-size: 12.6px;
+			color: hsl(220, 13%, 13%);
+		}
+	}
+	button {
+		&:hover {
+			opacity: 0.7;
+		}
+		padding: 10px;
+		border-radius: 6px;
+		border: none;
+		cursor: pointer;
+		width: 94%;
+		position: relative;
+		left: 8px;
+		color: white;
+		background: hsl(26, 100%, 55%);
+	}
+	.item {
+		margin: 8px 0px;
+		padding: 10px 10px;
+		padding-right: 15px;
+		display: flex;
+		cursor: pointer;
+		border-radius: 8px;
+		&:hover {
+			background: #eaecf18a;
+		}
+		.item_logo {
+			width: 43px;
+			margin-right: 10px;
+		}
+		.item_delete {
+			display: flex;
+			position: relative;
+			left: 4px;
+			top: 2px;
+			align-items: center;
+			justify-content: center;
+			fill: #c3cad9;
 
-      background: #eaecf18a;
-    }
-    .item_logo {
-      width: 43px;
-      margin-right: 10px;
-    }
-    .item_delete {
-      display: flex;
-      position: relative;
-      left: 6px;
-      
-      align-items: center;
-      justify-content: center;
-      fill: #C3CAD9;
-      
-       transform: scale(0.86);
-        &:hover {
-          fill: black !important;
-        }
-      
-    }
-    .item_right {
-      display: flex;
-      color: hsl(219, 9%, 45%);
-      flex-direction: column;
-      justify-content: space-evenly;
-      position: relative;
-      bottom: 3px;
-      .item_name {
-        font-size: 12.4px;
-      }
-      .item_price {
-        display: flex;
-        font-size: 13.4px;
-        align-items: center;
-        
-        justify-content: flex-start;
-        p{
-          margin-right: 4px;
-        }
-        .total_price {
-  font-weight: bold;
-  color: black;
-  font-size: 12.5px;
-        }
-      }
-    }
-    img {
-      width: 100%;
-      border-radius: 5px
-    }
-  }
-  
+			transform: scale(0.95);
+			&:hover {
+				fill: black !important;
+			}
+		}
+		.item_right {
+			display: flex;
+			color: hsl(219, 9%, 45%);
+			flex-direction: column;
+			justify-content: space-evenly;
+			position: relative;
+			bottom: 3px;
+			.item_name {
+				font-size: 12.4px;
+			}
+			.item_price {
+				display: flex;
+				font-size: 13.4px;
+				align-items: center;
+
+				justify-content: flex-start;
+				p {
+					margin-right: 4px;
+				}
+				.total_price {
+					font-weight: bold;
+					color: black;
+					font-size: 12.5px;
+				}
+			}
+		}
+		img {
+			width: 100%;
+			border-radius: 5px;
+		}
+	}
 }
 
 @media only screen and (max-width: 600px) {
-.cart {
-  width: 88%;
-  top: 70px;
-  .item_logo {
-    width: 21% !important;
-  }
-}
+	.cart {
+		width: 88%;
+		top: 70px;
+		.item_logo {
+			width: 21% !important;
+		}
+	}
 }

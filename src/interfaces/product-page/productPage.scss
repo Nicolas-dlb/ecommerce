@@ -17,10 +17,16 @@
 		left: 6.5px;
 	}
 	.product_content {
-		width: 50%;
+		width: 400px;
 		position: relative;
 		bottom: 20px;
 		margin-left: 40px;
+		.product_name {
+			h1 {
+				font-weight: bold;
+				font-size: 42px;
+			}
+		}
 		.product_company {
 			color: hsl(26, 100%, 55%);
 			margin: 10px 0px;
@@ -84,19 +90,29 @@
 				border: none;
 				margin-left: 10px;
 				color: hsl(0, 0%, 100%);
-				border-radius: 4px;
+				border-radius: 6px;
 				font-weight: bold;
-				padding: 5px;
+				padding: 5px 55px;
+				text-align: center;
+				font-family: Kumbh Sans;
 				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				text-align: center;
 				&:hover {
 					opacity: 0.6;
 				}
+				p {
+					position: relative;
+					right: 8px;
+				}
 				svg {
 					margin-right: 5px;
-					transform: scale(0.85);
+					transform: scale(0.65);
 					position: relative;
-					top: 2.7px;
+
+					left: -8px;
 					path {
 						fill: white !important;
 					}
@@ -104,9 +120,6 @@
 			}
 		}
 	}
-}
-.arrow_b9bbag-o_O-arrow__direction__right_174p6a9-o_O-arrow__size__medium_9f7hgo {
-	transform: translateX(-220px);
 }
 
 .arrow_b9bbag-o_O-arrow__direction__right_174p6a9-o_O-arrow__size__medium_9f7hgo,
@@ -138,8 +151,6 @@
 	span svg path {
 		transform: scale(0.6) translateX(140px) translateY(150px);
 	}
-
-	transform: translateX(177px);
 }
 .image_1swebtw-o_O-imageLoaded_zgbg08 {
 	border-radius: 13px;

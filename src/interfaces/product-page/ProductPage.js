@@ -61,7 +61,7 @@ function ProductPage() {
 					<h4>SNEAKER COMPANY</h4>
 				</div>
 				<div className="product_name">
-					<h2>Fall Limited Edition Sneakers</h2>
+					<h1>Fall Limited Edition Sneakers</h1>
 				</div>
 				<div className="product_description">
 					<p>
@@ -104,7 +104,7 @@ function ProductPage() {
 								fillRule="nonzero"
 							/>
 						</svg>
-						Add to cart
+						<p>Add to cart</p>
 					</button>
 				</div>
 			</div>
