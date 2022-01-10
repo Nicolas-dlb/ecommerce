@@ -9,6 +9,24 @@ import "./Cart.scss";
 function Cart() {
   const products = useSelector(selectProducts);
   const dispatch = useDispatch();
+
+  function truncateText(
+    str,
+    maxLength,
+    { side = "end", ellipsis = "..." } = {}
+  ) {
+    if (str.length > maxLength) {
+      switch (side) {
+        case "start":
+          return ellipsis + str.slice(-(maxLength - ellipsis.length));
+        case "end":
+        default:
+          return str.slice(0, maxLength - ellipsis.length) + ellipsis;
+      }
+    }
+    return str;
+  }
+
   return (
     <div className="cart">
       <div className="cart_header">
@@ -24,7 +42,7 @@ function Cart() {
                   <img src={product.image} alt="" />
                 </div>
                 <div className="item_right">
-                  <p className="item_name">{product.name}</p>
+                  <p className="item_name">{truncateText(product.name, 28)}</p>
                   <div className="item_price">
                     <p>${product.price} </p>
                     <p>x</p>

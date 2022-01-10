@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -10,13 +11,35 @@ const initialState = {
     },
   ],
 };
+// function containsObject(obj, list) {
+//   let i;
+//   for (i = 0; i < list.length; i++) {
+//     if (list[i] === obj) {
+//       return true;
+//     }
+//   }
 
+//   return false;
+// }
+let num = 0;
+let it;
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.products = [...state.products, action.payload];
+      state.products.map((item) => {
+        if (item.name === action.payload.name) {
+          num = action.payload.number;
+          it = item;
+          it.number = item.number + num;
+          return it;
+        }
+        return it;
+      });
+      num === 0
+        ? (state.products = [...state.products, action.payload])
+        : (num = 0);
     },
     deleteProduct: (state, action) => {
       state.products = state.products.filter(

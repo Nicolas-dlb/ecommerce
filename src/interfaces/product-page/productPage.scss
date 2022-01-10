@@ -8,8 +8,12 @@
 .productPage {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	padding: 20px;
+	overflow: hidden;
+	position: relative;
+	top: 10px;
+	width: 90%;
 	.selected_image {
 		width: 340px;
 		border-radius: 10px;
@@ -41,13 +45,17 @@
 			margin: 10px 0px;
 			p {
 				font-weight: bold;
+				font-size: 19px;
 				margin-right: 10px;
 			}
 			span {
 				background: hsl(25, 100%, 94%);
 				border-radius: 3px;
-				padding: 3px;
-				font-size: 10px;
+				padding: 5px 8px;
+				font-size: 12px;
+				display: flex; 
+				align-items: center; 
+				justify-content: center;
 				font-weight: bold;
 				color: hsl(26, 100%, 55%);
 			}
@@ -65,15 +73,17 @@
 				align-items: center;
 				justify-content: center;
 				background: hsl(223, 64%, 98%);
-				border-radius: 5px;
+				border-radius: 10px;
 				.but {
 					background: hsl(223, 64%, 98%);
 					border: none;
-					border-radius: 7px;
+					border-radius: 14px;
 					font-size: 20px;
 					padding: 12px 22px;
 					color: hsl(26, 100%, 55%);
 					cursor: pointer;
+				 text-align: center;
+					width: 100%;
 					&:hover {
 						opacity: 0.5;
 					}
@@ -89,9 +99,10 @@
 				background: hsl(26, 100%, 55%);
 				border: none;
 				margin-left: 10px;
-				color: hsl(0, 0%, 100%);
-				border-radius: 6px;
+				color: hsl(25, 100%, 94%);
+				border-radius: 8px;
 				font-weight: bold;
+				font-size: 16px;
 				padding: 5px 55px;
 				text-align: center;
 				font-family: Kumbh Sans;
@@ -151,9 +162,12 @@
 	span svg path {
 		transform: scale(0.6) translateX(140px) translateY(150px);
 	}
+	
+
 }
 .image_1swebtw-o_O-imageLoaded_zgbg08 {
 	border-radius: 13px;
+	
 }
 .thumbnail_199fmdb-o_O-thumbnail__active_ave2ei {
 	box-shadow: inset 0 0 0 2px rgb(255, 255, 255) !important;
@@ -163,9 +177,78 @@
 .thumbnail_199fmdb {
 	border-radius: 6px !important;
 	margin-right: 15px !important;
+	
+	
 }
 .close_1x3s325:hover {
 	svg {
 		fill: orange !important;
 	}
+}
+
+@media  only screen and (max-width: 910px){
+	.productPage {
+		flex-direction: column;
+		padding-top: 0px;
+		position: relative;
+		top: 0px;
+		width: 100%;
+		padding: 0;
+		.product_name {
+		
+h1 {
+	font-size: 24px !important;
+}
+		}
+		.product_content {
+			margin-top: 30px;
+			margin-left: 0;
+			width: 90%;
+			
+			justify-content: flex-start;
+		}
+		.product_images {
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			flex-direction: column;
+		}
+		.selected_image {
+			width: 52vw;
+			border-radius: 21px;
+			left: 0;
+			margin: 20px 0;
+		}
+		.price {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 92%;
+			p {
+				font-size: 24px !important;
+			}
+		}
+		.ReactGridGallery {
+			display: none !important;
+		}
+		.button {
+			flex-direction: column;
+			.button_addToCart {
+				width: 100%;
+				position: relative;
+				right: 9px;
+				margin-top: 10px;
+				padding: 13px 55px !important;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+.selected_image {
+	width: 100% !important;
+	border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+		border-radius: 0 !important;
+	margin: 0 !important;
+}
 }

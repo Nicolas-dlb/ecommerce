@@ -2,6 +2,7 @@ header {
   display: flex;
   width: 100%;
   height: 11vh;
+  padding-left: 20px;
   overflow: hidden;
   border-bottom: 1px solid rgba(238, 228, 228, 0.781);
   align-items: center;
@@ -19,16 +20,16 @@ header {
     padding: 1.2px;
     position: absolute;
     right: 107px;
-    top: 18px;
+    top: 3.2vh;
     pointer-events: none;
     
   }
   .background {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     top: 0;
     bottom: 0;
-    left: 0;
+    
     right: 0;
     position: absolute;
     z-index: 10;
@@ -47,15 +48,15 @@ display: none ;
   }
   .logo {
  width: 120px;
- position: relative;
+
  margin: 0px 10px;
   }
   #cart {
     width: 22px;
     cursor: pointer;
     position: absolute;
-    top: 21px;
-    right: 110px;
+    top: 4vh;
+    right: 115px;
     transform: scale(0.9);
     &:hover path {
       fill: black;
@@ -65,7 +66,7 @@ display: none ;
   .user {
     width: 36px;
   position: absolute;
-  top: 11px;
+  top: 3vh;
 right: 40px;
 
     border-radius: 50%;
@@ -80,7 +81,7 @@ right: 40px;
     list-style: none;
     position: relative;
     top: 9px;
-    
+    left: 10px;
     font-size: 13px;
     color: hsl(219, 9%, 45%);
    &:hover {
@@ -100,8 +101,9 @@ right: 40px;
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 910px){
   header{
+    height: 10vh;
     .user {
       width: 35px;
     }
@@ -115,6 +117,12 @@ right: 40px;
     .header_menu {
       display: flex;
       margin-left: 15px;
+    }
+    #cart {
+      transform: scale(1.1);
+    }
+    .logo {
+      width: 150px;
     }
     .nav_web {
       display: none;
